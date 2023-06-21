@@ -11,7 +11,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[your\_project\_name\] ](#-your_project_name-)
+- [📖 \[The Leaderboard\] ](#-the-leaderboard-)
   - [🛠 Built With ](#-built-with-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
@@ -30,7 +30,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [The Leaderboard] <a name="about-project"></a>
 
 **[The Leaderboard]** 🏆 is a website displays scores submitted by different players 👥. It also allows you to submit your score 📝. All data is preserved thanks to the external Leaderboard API service 🌐.
 
