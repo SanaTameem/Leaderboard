@@ -16,7 +16,7 @@ form.addEventListener('submit', (e) => {
       postScore(nameInput.value, scoreInput.value);
       form.reset();
     } else {
-      alertSpan.textContent = 'Please write a vlid Name and Score';
+      alertSpan.textContent = 'Please write a valid Name and Score';
       alertSpan.style.display = 'flex';
       setTimeout(() => {
         alertSpan.style.display = 'none';
