@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -5,14 +8,19 @@
 }
 
 body {
+  background-color: #001c30;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 
 .main-title {
-  font-size: 50px;
+  font-size: 80px;
   margin-left: 50px;
+  margin-top: 40px;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 900;
 }
 
 main {
@@ -28,7 +36,7 @@ main {
   width: 100%;
   padding: 30px 60px;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .scores-container {
@@ -41,7 +49,9 @@ main {
 }
 
 .sub-title {
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Dancing Script', cursive;
 }
 
 .score-title-btn {
@@ -55,16 +65,19 @@ main {
 .refresh-btn {
   width: 120px;
   padding: 10px;
-  background: none;
+  background: #176b87;
   font-size: 22px;
-  box-shadow: 2px 2px 8px #000;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 8px #fff;
   cursor: pointer;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
 }
 
 .scores-list {
   margin-top: 30px;
   width: 100%;
-  border: 2px solid #000;
+  border: 2px solid #fff;
 }
 
 .scores-text {
@@ -74,11 +87,12 @@ main {
 }
 
 .scores-text:nth-child(odd) {
-  background-color: #e4e1e1;
+  background-color: #176b87;
 }
 
 .scores-text:nth-child(even) {
   background-color: #fff;
+  color: #176b87;
 }
 
 .add-container {
@@ -105,12 +119,47 @@ main {
   width: 150px;
   font-size: 22px;
   align-self: flex-end;
-  background: none;
+  background: #176b87;
   padding: 10px;
-  box-shadow: 2px 2px 8px #000;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 8px #fff;
   cursor: pointer;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
 }
 
 .name-input {
   margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scores-container {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: 100%;
+  }
+
+  .add-container {
+    width: 100%;
+  }
+
+  .main-title {
+    margin: 0;
+    font-size: 70px;
+    text-align: center;
+  }
+
+  .add-score-form {
+    width: 100%;
+  }
+
+  .submit-btn {
+    align-self: center;
+  }
 }
