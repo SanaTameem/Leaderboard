@@ -1,45 +1,29 @@
 import './style.css';
-import createScore from './modules/createScore.js';
+import postScore from './modules/post.js';
 import isNumeric from './modules/onlyNumber.js';
-import setTolocalStorage from './modules/storage.js';
+import scoreDiv from './modules/loadData.js';
 
 const alertSpan = document.querySelector('.alert');
 const nameInput = document.querySelector('.name-input');
 const scoreInput = document.querySelector('.score-input');
-const submitBtn = document.querySelector('.submit-btn');
-const scoreContainer = document.querySelector('.scores-list');
-const arrayOfScores = JSON.parse(localStorage.getItem('arrayOfScores')) || [];
+const form = document.querySelector('.add-score-form');
+const refresh = document.querySelector('.refresh-btn');
 
-const addScore = () => {
-  if (nameInput.value && scoreInput.value) {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (nameInput && scoreInput) {
     if (isNumeric(scoreInput.value)) {
-      // object
-      const score = {
-        name: nameInput.value,
-        score: scoreInput.value,
-      };
-        // making the container empty
-      scoreContainer.innerHTML = '';
-      // push to array
-      arrayOfScores.unshift(score);
-      // calling create function
-      createScore(arrayOfScores, scoreContainer);
-      // add to local storage
-      setTolocalStorage(arrayOfScores);
-      // empty the input fields
-      nameInput.value = '';
-      scoreInput.value = '';
+      postScore(nameInput.value, scoreInput.value);
+      form.reset();
     } else {
-      alertSpan.textContent = 'Score only accept numbers';
+      alertSpan.textContent = 'Please write a vlid Name and Score';
       alertSpan.style.display = 'flex';
       setTimeout(() => {
         alertSpan.style.display = 'none';
-      }, 1000);
+      }, 3000);
       scoreInput.value = '';
     }
   }
-};
+});
 
-// event listeners
-submitBtn.addEventListener('click', addScore);
-document.addEventListener('DOMContentLoaded', createScore(arrayOfScores, scoreContainer));
+refresh.addEventListener('click', scoreDiv);
