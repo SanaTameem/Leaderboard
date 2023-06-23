@@ -2,6 +2,7 @@ import './style.css';
 import postScore from './modules/post.js';
 import isNumeric from './modules/onlyNumber.js';
 import scoreDiv from './modules/loadData.js';
+
 const nameInput = document.querySelector('.name-input');
 const scoreInput = document.querySelector('.score-input');
 const form = document.querySelector('.add-score-form');
@@ -13,7 +14,7 @@ form.addEventListener('submit', (e) => {
     if (isNumeric(scoreInput.value)) {
       postScore(nameInput.value, scoreInput.value);
       form.reset();
-    } 
+    }
   }
 });
 
