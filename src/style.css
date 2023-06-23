@@ -114,11 +114,3 @@ main {
 .name-input {
   margin-top: 30px;
 }
-
-.alert {
-  display: none;
-  justify-content: center;
-  width: 100%;
-  font-size: 20px;
-  color: red;
-}

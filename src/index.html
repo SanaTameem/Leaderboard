@@ -8,7 +8,6 @@
 </head>
 <body>
     <main>
-        <span class="alert"></span>
         <h1 class="main-title">Leaderboard</h1>
         <section class="main-container">
             <article class="scores-container">
@@ -17,19 +16,16 @@
                     <button class="refresh-btn">Refresh</button>
                 </div>
                 <div class="scores-list">
-                    <!-- <p class="scores-text">Name : 100</p>
-                    <p class="scores-text">Name : 100</p>
-                    <p class="scores-text">Name : 100</p>
-                    <p class="scores-text">Name : 100</p> -->
+                    <!--Scores will be added here-->
                 </div>
             </article>
             <!--form section-->
             <article class="add-container">
                 <h3 class="sub-title">Add your score</h3>
                 <form class="add-score-form">
-                    <input type="text" class="name-input" placeholder="Your Name">
-                    <input type="text" class="score-input" placeholder="Your Score">
-                    <button class="submit-btn" type="button">Submit</button>
+                    <input type="text" class="name-input" placeholder="Your Name" required>
+                    <input type="number" class="score-input" placeholder="Your Score" required>
+                    <input class="submit-btn" type="submit">
                 </form>
             </article>
         </section>
